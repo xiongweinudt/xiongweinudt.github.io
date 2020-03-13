@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+	div{margin:5px;border:0;padding:0;}
+	#Box1{
+		width:200px;
+		height:72px;
+		background-color:#666;
+		float:left;
+	}
+    @keyframes slider {
+        0%{transform: translateX(0px);}
+        1%,25%{transform: translateX(-500px);}
+        26%,50%{transform: translateX(-1000px);}
+        51%,75%{transform: translateX(-1500px);}
+        76%,100%{transform: translateX(-2000px);}
+    }
+    .container{width: 500px; height: 3750px; overflow: hidden; }
+	.container:hover{
+			animation-play-state:paused;
+            -webkit-animation-play-state: paused;
+        } 
+    .itemList{width: 9999px; margin: 0; padding: 0; border: 0; position: relative; font-size: 0;}
+    .itemListSlider{left: 0; animation: slider 8s linear infinite;}   
+</style>
+<body>
+<div id="Box1"></div>
+<div class="container">
+    <div class="itemList itemListSlider" style="magin-top:100px;">
+		<img src="UW_Campus.jpg" alt=""/>
+		<img src="Spring.jpg" alt="">
+		<img src="Family_Ireland.jpg" alt=""/>
+		<img src="Strawberry.jpg" alt=""/>
+		<img src="UW_Campus.jpg" alt=""/>
+    </div>
+</div>
+</body>
+</html>

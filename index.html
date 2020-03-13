@@ -11,15 +11,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	<script>
+	<!--Baidu Statistical-->
 	var _hmt = _hmt || [];
 	(function() {
 		  var hm = document.createElement("script");
 		  hm.src = "https://hm.baidu.com/hm.js?cd3c82d6e7b2143da875e8b4c79b4a38";
 		  var s = document.getElementsByTagName("script")[0]; 
 		  s.parentNode.insertBefore(hm, s);
-	})();
+	})();	
 	</script>
-
+	<!--Carousel animation-->
+    <style type="text/css">
+		@keyframes slider {
+			0%{transform: translateX(0px);}
+			1%,25%{transform: translateX(-500px);}
+			26%,50%{transform: translateX(-1000px);}
+			51%,75%{transform: translateX(-1500px);}
+			76%,100%{transform: translateX(-2000px);}
+		}
+		.container{width: 500px; height: 375px; overflow: hidden;}
+		.itemList{width: 2500px; margin=0; padding: 0; border: 0; position: relative; font-size: 0;}
+		.itemListSlider{left: 10; animation: slider 16s ease-in-out infinite;}   
+		.itemList:hover{
+			animation-play-state:paused;
+            -webkit-animation-play-state: paused;
+        }        
+	</style>
 	</head>
 	<body class="is-preload">
 
@@ -52,10 +69,17 @@
 										<p>My research areas include Spatial Databases, High Performance Geographic Information System, and 
 										apply Artificial Intelligence to solve geospatial problems.</p>
 										
-									</div>
-									<span class="image object">
-										<img src="images/UW_Campus.jpg" alt="" />
-									</span>
+									</div>	
+									<div style="margin:20px; float:left;"></div>									
+									<div class="container" style="magin-left:100px;">
+										<div class="itemList itemListSlider">
+											<img src="images/UW_Campus.jpg" alt="" />
+											<img src="images/Spring.jpg" alt="">
+											<img src="images/Family_Ireland.jpg" alt=""/>
+											<img src="images/Strawberry.jpg" alt=""/>
+											<img src="images/UW_Campus.jpg" alt=""/>
+										</div>
+									</div>									
 								</section>								
 								
 							<!-- Content -->
